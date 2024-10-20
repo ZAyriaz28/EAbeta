@@ -18,28 +18,31 @@ h1, h2, h3, p {
 
 header {
     background-color: #20b127;
-    padding: 1rem 1rem;
+    padding: 1rem;
 }
 
 header .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Cambiado a columna para móviles */
+    align-items: center; /* Alinea el contenido al centro */
 }
 
 header h1 {
     color: #fff;
     font-size: 2rem;
     text-transform: uppercase;
+    text-align: center; /* Centra el texto */
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    flex-direction: column; /* Cambiado a columna para móviles */
+    align-items: center; /* Centra los elementos */
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 10px 0; /* Espaciado vertical para móviles */
 }
 
 nav ul li a {
@@ -58,7 +61,7 @@ nav ul li a:hover {
 
 /* Sección hero */
 #hero {
-    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.es%2Ffotos-vectores-gratis%2Ffondo-plantas&psig=AOvVaw2_8YB5_FZTl5jmbRI82hVB&ust=1729204301260000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLCmzJ36k4kDFQAAAAAdAAAAABAJ');
+    background-image: url('https://www.freepik.es/fotos-vectores-gratis/fondo-plantas'); /* Asegúrate de que el enlace de imagen sea válido */
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -87,20 +90,17 @@ nav ul li a:hover {
 }
 
 #hero h2 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Ajustado para pantallas más pequeñas */
 }
 
 #hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1.1rem; /* Ajustado para pantallas más pequeñas */
 }
 
 .btn-main {
     display: inline-block;
     padding: 12px 25px;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Ajustado para pantallas más pequeñas */
     background-color: #ffa000;
     color: white;
     text-decoration: none;
@@ -118,6 +118,7 @@ nav ul li a:hover {
     justify-content: space-around;
     padding: 3rem 0;
     background-color: #1b5e20;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
 }
 
 #features .feature {
@@ -127,6 +128,8 @@ nav ul li a:hover {
     padding: 2rem;
     text-align: center;
     transition: transform 0.3s ease;
+    flex: 1 1 30%; /* Permite que las características se ajusten */
+    margin: 10px; /* Espaciado entre características */
 }
 
 #features .feature:hover {
@@ -135,7 +138,6 @@ nav ul li a:hover {
 
 #features h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
 }
 
 #features p {
@@ -153,15 +155,17 @@ footer .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column; /* Cambiado a columna para móviles */
 }
 
 footer nav ul {
     list-style: none;
     display: flex;
+    flex-direction: column; /* Cambiado a columna para móviles */
 }
 
 footer nav ul li {
-    margin-left: 20px;
+    margin: 10px 0; /* Espaciado vertical */
 }
 
 footer nav ul li a {
@@ -182,24 +186,38 @@ footer p {
 /* Media Queries para diseño responsive */
 @media (max-width: 768px) {
     #features {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+        text-align: center; /* Centra el texto */
     }
 
     #features .feature {
-        margin-bottom: 2rem;
+        margin-bottom: 2rem; /* Espaciado entre características */
+        flex: 1 1 90%; /* Ajusta el ancho en pantallas pequeñas */
     }
 
     header .container {
-        flex-direction: column;
+        flex-direction: column; /* Cambia a columna en móviles */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño en móviles */
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Cambia a columna en móviles */
     }
 
     nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
+        margin-left: 0; /* Quita margen lateral en móviles */
+        margin-bottom: 10px; /* Espaciado vertical en móviles */
+    }
+
+    #hero h2 {
+        font-size: 2rem; /* Ajusta el tamaño del texto en móviles */
+    }
+
+    #hero p {
+        font-size: 1rem; /* Ajusta el tamaño del texto en móviles */
     }
 }
