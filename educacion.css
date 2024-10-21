@@ -9,6 +9,7 @@
 body {
     background-color: #f3f4f6;
     color: #333;
+    margin-bottom: 80px; /* Para evitar que el contenido sea cubierto por el footer */
 }
 
 /* Header con el logo en el centro */
@@ -36,10 +37,11 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Para que los elementos del menú se alineen mejor en pantallas pequeñas */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 10px;
 }
 
 nav ul li a {
@@ -57,12 +59,12 @@ nav ul li a:hover {
 
 /* Sección de contenido principal */
 .content {
-    padding: 50px 20px;
+    padding: 20px;
     text-align: center;
 }
 
 .content h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
@@ -80,7 +82,7 @@ nav ul li a:hover {
 .media video {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 60%;
+    max-width: 90%; /* Cambiar de 60% a 90% para pantallas más pequeñas */
 }
 
 /* Footer */
@@ -92,4 +94,35 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 1.8rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .media video {
+        max-width: 100%; /* Para pantallas pequeñas, que ocupe todo el ancho disponible */
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
 }
