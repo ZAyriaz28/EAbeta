@@ -41,7 +41,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 10px;
+    margin: 10px 20px; /* Aumentado el margen horizontal para separar los elementos */
 }
 
 nav ul li a {
