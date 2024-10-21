@@ -28,20 +28,21 @@ header {
     color: #10b981;
 }
 
-/* Menú de navegación en la parte inferior del header */
+/* Menú de navegación ajustado a la izquierda con mayor espaciado */
 nav {
-    margin-top: 10px;
+    margin-top: 20px; /* Aumentado el espacio superior */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Para que los elementos del menú se alineen mejor en pantallas pequeñas */
+    justify-content: flex-start; /* Alinea el menú a la izquierda */
+    flex-wrap: wrap;
+    padding-left: 20px; /* Aumenta el espacio a la izquierda */
 }
 
 nav ul li {
-    margin: 10px 20px; /* Aumentado el margen horizontal para separar los elementos */
+    margin: 10px 30px; /* Aumentado el margen horizontal para más espacio entre elementos */
 }
 
 nav ul li a {
@@ -108,6 +109,7 @@ footer {
 
     nav ul {
         flex-direction: column;
+        padding-left: 0; /* Quita el padding en pantallas pequeñas */
     }
 
     nav ul li {
@@ -126,3 +128,4 @@ footer {
         font-size: 0.9rem;
     }
 }
+
